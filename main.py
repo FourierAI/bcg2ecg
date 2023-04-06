@@ -54,7 +54,7 @@ if uploaded_file is not None:
     os.remove('csv.csv')
 
     st.write('选择需要可视化的数据')
-    num_data = st.number_input('选择需要可视化的数据', min_value=1, max_value=len(results), step=1, format='%d')
+    num_data = st.number_input('第几条数据', min_value=1, max_value=len(results), step=1, format='%d')
     if st.button('生成可视化结果'):
         fig = plt.figure()
         plt.plot(data[num_data], label = 'bcg signal')
